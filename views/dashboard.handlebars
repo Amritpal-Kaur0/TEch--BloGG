@@ -1,0 +1,42 @@
+{{!-- <div class="row justify-content-between">
+  <h2>{{username}} DASHBOARD</h2>
+  <div class="">
+    <button class="btn btn-light" id="new-btn">New Post</button>
+  </div>
+</div> --}}
+
+<div class="row justify-content-between">
+  <div class="col-4">
+   <h2><u>{{username}} DASHBOARD</u></h2>
+  </div>
+  <div class="col-2">
+     <button class="btn btn-primary" id="new-btn"> + New Post</button>
+  </div>
+</div>
+
+{{#each blogs as |blog|}}
+  <div class="row mb-4 text-center pb-3 blog">
+    <div class="col-md-5">
+      <h2><a href="/blog/{{blog.id}}">{{blog.title}}</a></h2>
+       <p>Created on {{format_date blog.date_created}}</p>
+    </div>
+    <div class="col-md-7">
+      <p>
+        {{blog.content}}
+      </p>
+    </div>
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <button class="btn btn-primary edit-btn" data-id="{{blog.id}}">
+        Edit
+      </button>
+
+      <button class="btn btn-danger del-btn" data-id="{{blog.id}}">
+        Delete
+      </button>
+    </div>
+
+  </div>
+{{/each}}
+
+<script src="/js/blog.js"></script>

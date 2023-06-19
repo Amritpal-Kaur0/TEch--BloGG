@@ -1,0 +1,30 @@
+<div class="text-center">
+  <div class="blog">
+    <h2>{{title}}</h2>
+    <p>{{content}}</p>
+    <p>Created by {{blogUser.username}} on {{format_date date_created}}</p>
+  </div>
+
+  {{!-- Only render if comments exists --}}
+  {{#if comments}}
+    <section class="text-center">
+      {{#each comments as |comment|}}
+      {{> comment-details}}
+      {{/each}}
+    </section>
+  {{/if}}
+
+  <form class="form comment-form" data-id="{{id}}">
+    <div class="form-group">
+      <label for="new-comment bg-light">New Comment:</label>
+      <input class="form-input" type="text" id="new-comment"/>
+      <button class="btn btn-primary" type="submit" id="commentBtn">
+      Comment
+      </button>
+    </div>
+  </form>
+</div>
+
+<script src="/js/comment.js"></script>
+
+
