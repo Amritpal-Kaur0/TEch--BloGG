@@ -5,8 +5,7 @@
   "main": "server.js",
   "scripts": {
     "install": "npm i",
-    "test":"jest",
-    "start": "node server.js"
+    "test":"jest"
   },
   "repository": {
     "type": "git",
