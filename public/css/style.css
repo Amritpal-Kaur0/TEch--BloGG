@@ -1,8 +1,11 @@
 .blog {
-	border-bottom: 3px solid #9999ff;
-	padding-top: 30px;
+	border-bottom: 3px solid #e84ab9;
+	padding-top: 40px;
 }
 
 .comment {
 	border-bottom: 3px solid lightseagreen !important;
+}
+span{
+	font-size: 95px;
 }

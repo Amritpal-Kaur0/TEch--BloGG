@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Blog } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// Route to display form to create new post
+//  to create new post
 router.get('/new', withAuth, async (req, res) => {
   try {
 
@@ -17,7 +17,7 @@ router.get('/new', withAuth, async (req, res) => {
   }
 });
 
-// Route to display current blog form with value to edit
+// current blog form with value to edit
 router.get('/edit/:id', withAuth, async (req, res) => {
   try {
 

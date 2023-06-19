@@ -1,25 +1,25 @@
 [
   {
     "content": "I agree that MVC is very important",
-    "username": "kashpateltech",
+    "username": "Amrit0311",
     "blog_id": "1",
     "user_id": "2"
   },
   {
-    "content": "That really helps me clear up the confusion between the two!",
-    "username": "Etta0311",
+    "content": " clear up the confusion between the two",
+    "username": "Amrit0311",
     "blog_id": "2",
     "user_id": "3"
   },
   {
     "content": "Awersome post!",
-    "username": "kashpateltech",
+    "username": "techguru",
     "blog_id": "2",
     "user_id": "2"
   },
   {
     "content": "Look forward to learning that in my up coming lessons!",
-    "username": "devRayHe",
+    "username": "devops engineer",
     "blog_id": "3",
     "user_id": "1"
   }

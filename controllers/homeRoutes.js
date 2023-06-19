@@ -28,7 +28,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Use the custom middleware before allowing the user to access blog
+
 router.get('/blog/:id', withAuth, async (req, res) => {
   try {
     // Get blog data with match id from req params
@@ -42,9 +42,8 @@ router.get('/blog/:id', withAuth, async (req, res) => {
     });
 
     const blog = blogData.get({ plan: true });
-    const blogUser = blog.user.get({ plan:true });
+    // const blogUser = blog.user.get({ plan:true });
 
-    // Get all comment belongs to the blog with match id from req params
     const commentData = await Comment.findAll({
       where: {
         blog_id: req.params.id,
@@ -61,8 +60,7 @@ router.get('/blog/:id', withAuth, async (req, res) => {
 
     res.render('blog', {
       ...blog,
-      blogUser,
-      comments,
+           comments,
       username: req.session.username,
       logged_in: req.session.logged_in
     });
@@ -71,7 +69,7 @@ router.get('/blog/:id', withAuth, async (req, res) => {
   }
 });
 
-// Use the custom middleware before allowing the user to access dashboard
+
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
     const blogData = await Blog.findAll({
@@ -99,7 +97,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-  // If the user is already logged in, redirect to dashboard
+  
   if (req.session.logged_in) {
     res.redirect('/api/dashboard');
     return;
