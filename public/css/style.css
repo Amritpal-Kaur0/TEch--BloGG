@@ -1,0 +1,8 @@
+.blog {
+	border-bottom: 3px solid #9999ff;
+	padding-top: 30px;
+}
+
+.comment {
+	border-bottom: 3px solid lightseagreen !important;
+}
