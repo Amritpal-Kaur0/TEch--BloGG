@@ -67,7 +67,7 @@ Contributions to this project are welcome. To contribute, follow these steps:
 * Open a pull request
 
 ## Testing
-deployed link - 
+deployed link -  https://hayer-techblog-a4b94ceb5446.herokuapp.com/
 
 ## License
 This project is licensed under the MIT license. For more information about the license, go to [License](https://choosealicense.com/licenses/mit/).
